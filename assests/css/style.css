@@ -42,14 +42,28 @@
   --character-bottom-image-color: rgba(255,255,255,0.1);
   --character-top-image-src: url("../images/characters/inverted-world-monster.svg");
   --character-top-image-color: #000;
-  --backgroung-lamp-image: url("../images/backgrounds/lamps-inverted/png");
+  --background-lamp-image: url("../images/backgrounds/lamps-inverted.png");
   --footer-background-color: #000;
+}
+
+/* estilo de letra para botão e titulos */
+.dark_theme button,
+.dark_theme h1,
+.dark_theme h2,
+.dark_theme h3 {
+  letter-spacing: 5px;
+  font-weight: normal;
+}
+
+.dark_theme .invert_element{
+  transform: rotateZ(180deg) scaleX(-1);
 }
 
 /* generic styles */
 * {
   margin:0;
   box-sizing: border-box;
+  transition: 1s;
 }
 
 h1,
@@ -82,6 +96,27 @@ button{
   text-transform: uppercase;
   cursor: pointer;
   transition: background 1s;
+}
+
+input, textarea{
+  border: 2px solid var(--primary-color-contrast);
+  background-color: var(--field-background-color);
+  color: var(--primary-color-contrast);
+  padding: 6px;
+  margin-bottom: 24px;
+  font-size: 1rem;
+  resize: none;
+}
+
+input:focus-visible,
+textarea:focus-visible{
+  border-color: black;
+  outline: none;
+}
+
+
+label{
+  margin-bottom: 8px;
 }
 
 /* header style */
@@ -163,6 +198,16 @@ main{
   flex-direction: column;
 }
 
+main::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: var(--page-background) no-repeat,
+  url("../images/backgrounds/florest.png") no-repeat;
+  background-size: cover;
+  z-index:  -1;
+}
 /* sections styles */
 .container{
   max-width: 1200px;
@@ -225,6 +270,7 @@ section p{
 #section_stranger_things_gallery .gallery_container{
   display: flex;
   gap: 50px;
+  padding: 20px;
 }
 #section_stranger_things_gallery .gallery_image {
   width: 250px;
@@ -293,23 +339,54 @@ section p{
   padding: 24px;
 }
 
+
 #section_form .form_container button{
   border: none;
   background-color: var(--field-background-color);
   color: var(--primary-color-contrast);
   max-width: 300px;
   align-self: center;
+  margin-top: 20px;
 }
 
 #section_form .form_container button:hover{
   background-color: var(--primary-color-contrast);
   color: var(--field-background-color);
 }
-/* estilo de letra para botão e titulos */
-.dark_theme button,
-.dark_theme h1,
-.dark_theme h2,
-.dark_theme h3 {
-  letter-spacing: 5px;
-  font-weight: normal;
+
+/* rodapé */
+footer{
+  padding: 60px 0;
+  background-color: var(--footer-background-color);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+footer p{
+  max-width: 700px;
+  margin-bottom: 24px;
+}
+
+footer::before,
+footer::after{
+  content: "";
+  width: 300px;
+  height: 200px;
+  background: url("../images/footer/tape.svg") no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: -30px;
+}
+footer::before{
+  left: -50px;
+  transform: rotateZ(-10deg);
+}
+
+footer::after{
+  right: -50px;
+  transform: rotateZ(20deg);
 }
