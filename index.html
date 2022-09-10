@@ -1,149 +1,150 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <!-- meta tags para SEO -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <!-- meta tags para SEO -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- chamada do link do estilo css -->
-  <link rel="stylesheet" href="./assests/css/style.css">
-  <title>Invert World - Digital Innovation One</title>
-</head>
-<body class="light_theme" aria-label="O site está utilizando o tema light" role="body">
+    <!-- chamada do link do estilo css -->
+    <link rel="stylesheet" href="./assests/css/style.css">
+    <title>Invert World - Digital Innovation One</title>
+  </head>
+  <body class="light_theme" aria-label="O site está utilizando o tema light" role="body">
   <!-- cabeçalhoasd -->
-  <header aria-label="Cabeçalho da página">
-    <audio id="music" autoplay="" src="assets/musics/normal-world.mpeg">
-      <source src="assets/musics/normal-world.mpeg" aria-details="Audio do site">
-    </audio>
+    <header aria-label="Cabeçalho da página">
+      <audio id="music" autoplay src="assests/musics/normal-world.mpeg">
+        <source src="assests/musics/inverted-world.mpeg" aria-details="Audio do site">
+      </audio>
 
-    <div class="header_content">
-      <img class="invert_element" src="assests/images/banner/logo.svg" alt="Imagem principal do site">
-      <p class="invert_element" role="text">
-        Uma jornada para quem não tem medo do desconhecido. O caminho para o Mundo invertido é incerto, repleto de obstáculos e perigos. Porém a recompensa é grande: salvar Hawkings e o Mundo das garras de Vecna. Você está preparado? Então clique no botão abaixo para entrar no Mundo Invertido!
+      <div class="header_content">
+        <img class="invert_element" src="assests/images/banner/logo.svg" alt="Imagem principal do site">
+        <p class="invert_element" role="text">
+          Uma jornada para quem não tem medo do desconhecido. O caminho para o Mundo invertido é incerto, repleto de obstáculos e perigos. Porém a recompensa é grande: salvar Hawkings e o Mundo das garras de Vecna. Você está preparado? Então clique no botão abaixo para entrar no Mundo Invertido!
+        </p>
+        <button id="switch_theme_button" class="invert_element" onclick="switchTheme()">Inverter Mundos</button>
+      </div>
+      <!-- área para colocar as imagens -->
+      <div id="top_characters" class="world_characters"></div>
+    </header>
+
+    <!-- seção principal do s ite -->
+    <main>
+      <div id="botton_characters" class="world_characters"></div>
+
+      <section id="section_inverted_world" class="container">
+        <div class="section_text">
+          <h2>O Mundo Invertido</h2>
+          <p role="text">
+            O Mundo Invertido parece uma cópia do nosso mundo, mas com criaturas horrendas, tempestades assustadoras, muita escuridão e entidades malignas. Um reino controlado por Vecna, que tem planos de trazer tudo isso ao nosso mundo.
+          </p>
+        </div>
+
+        <img
+          class="invert_element"
+          src="assests/images/content/inverted-world.png"
+          alt="Imagem Ilustrativa do Mundo Invertido"
+        />
+      </section>
+
+      <section id="section_stranger_things_trailer" class="container">
+        <div class="video_frame" aria-hidden="true">
+          <iframe
+            width="100%"
+            max-width="460"
+            height="215"
+            src="https://www.youtube.com/embed/otutSrxYpa4"
+            title="Youtube Video Player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="section_text">
+          <h2>Stranger Things Vol. 4</h2>
+          <p role="text">
+            Mais experientes, os heróis de Stranger Things também precisam enfrentar desafios maiores do que nunca e fazer decisões que vão mudar suas vidas para sempre. Confira ao lado o trailer da quarta temporada.
+          </p>
+        </div>
+      </section>
+
+      <section id="section_stranger_things_gallery">
+        <div class="container section_text">
+          <h2>A Segunda série mais assistida da Netflix</h2>
+        <ul class="gallery_container" role="gallery">
+          <li class="gallery_image invert_element">
+                <img src="assests/images/content/serie-image-01.png" alt="Vecna">
+          </li>
+          <li class="gallery_image invert_element">
+              <img src="assests/images/content/serie-image-02.png" alt="Imagem ilustrativa da série">
+          </li>
+          <li class="gallery_image invert_element">
+            <img src="assests/images/content/serie-image-03.png" alt="Imagem Eleven Assustador">
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="section_form" class="container">
+      <h2>O Clube Dungeons & Dragons</h2>
+      <p>
+        Para deter Vecna, os heróis de Stranger Things também precisam de você. O Clube do D&D mais famoso de Hawkings está com vagas abertas para sua próxima aventura. Se você é destemido, gosta de desafios e não tem medo de rodar o D20, chegou a hora de se inscrever para fazer parte da nova campanha.
       </p>
-      <button id="switch_theme_button" class="invert_element" onclick="switchTheme()">Inverter Mundos</button>
-    </div>
+      <div class="form_content">
+        <h3>Entre para o clube do D&D e tenha experiências de <span>outro mundo</span></h3>
 
-    <div id="top_characters" class="world_characters inver"></div>
-  </header>
+        <div class="form_container">
+          <form>
+            <!-- nome -->
+            <label for="txtName">Nome Completo</label>
+            <input type="text" name="name" id="txtName">
 
-  <!-- seção principal do s ite -->
-  <main>
-    <div id="botton_characters" class="world_characters"></div>
+            <!-- email -->
+            <label for="txtEmail">E-mail</label>
+            <input type="text" name="email" id="txtEmail">
 
-    <section id="section_inverted_world" class="container">
-      <div class="section_text">
-        <h2>O Mundo Invertido</h2>
-        <p role="text">
-          O Mundo Invertido parece uma cópia do nosso mundo, mas com criaturas horrendas, tempestades assustadoras, muita escuridão e entidades malignas. Um reino controlado por Vecna, que tem planos de trazer tudo isso ao nosso mundo.
-        </p>
-      </div>
+            <!-- level -->
+            <label for="txtLevel">Level</label>
+            <input type="text" name="level" id="txtLevel">
 
-      <img
-        class="invert_element"
-        src="assests/images/content/inverted-world.png"
-        alt="Imagem Ilustrativa do Mundo Invertido"
-      />
-    </section>
+            <!-- personagem -->
+            <label for="txtCharacter">Personagem</label>
+            <textarea name="character" id="txtCharacter" cols="30" rows="10"></textarea>
 
-    <section id="section_stranger_things_trailer" class="container">
-      <div class="video_frame" aria-hidden="true">
-        <iframe
-          width="460"
-          height="215"
-          src="https://www.youtube.com/embed/otutSrxYpa4"
-          title="Youtube Video Player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-
-      <div class="section_text">
-        <h2>Stranger Things Vol. 4</h2>
-        <p role="text">
-          Mais experientes, os heróis de Stranger Things também precisam enfrentar desafios maiores do que nunca e fazer decisões que vão mudar suas vidas para sempre. Confira ao lado o trailer da quarta temporada.
-        </p>
+            <button type="button" id="btnSubscribe">Me inscrever</button>
+          </form>
+        </div>
       </div>
     </section>
+    </main>
 
-    <section id="section_stranger_things_gallery">
-      <div class="container section_text">
-        <h2>A Segunda série mais assistida da Netflix</h2>
-      <ul class="gallery_container" role="gallery">
-        <li class="gallery_image invert_element">
-              <img src="assests/images/content/serie-image-01.png" alt="Vecna">
-        </li>
-        <li class="gallery_image invert_element">
-            <img src="assests/images/content/serie-image-02.png" alt="Imagem ilustrativa da série">
-        </li>
-        <li class="gallery_image invert_element">
-          <img src="assests/images/content/serie-image-03.png" alt="Imagem Eleven Assustador">
-        </li>
-      </ul>
-    </div>
-  </section>
-  <section id="section_form" class="container">
-    <h2>O Clube Dungeons & Dragons</h2>
-    <p>
-      Para deter Vecna, os heróis de Stranger Things também precisam de você. O Clube do D&D mais famoso de Hawkings está com vagas abertas para sua próxima aventura. Se você é destemido, gosta de desafios e não tem medo de rodar o D20, chegou a hora de se inscrever para fazer parte da nova campanha.
-    </p>
-    <div class="form_content">
-      <h3>Entre para o clube do D&D e tenha experiências de <span>outro mundo</span></h3>
+    <!-- rodapé do site -->
+    <footer>
+      <p>Projeto construído para fins didáticos com o objetivo de colocar em prática os conhecimentos de HTML, CSS e JavaScript aprendidos na DIO.</p>
+      <img src="assests/images/footer/logo.svg" alt="Logo DIO">
+    </footer>
 
-      <div class="form_container">
-        <form >
-          <!-- nome -->
-          <label for="txtName">Nome Completo</label>
-          <input type="text" name="name" id="txtName">
+    <!-- código JS -->
+    <script>
+      window.addEventListener('click', function() {
+        const audio = document.getElementById('music');
+        audio.play();
+        audio.volume = 0.2;
+      })
 
-          <!-- email -->
-          <label for="txtEmail">E-mail</label>
-          <input type="text" name="email" id="txtEmail">
+      function switchTheme() {
+        document.body.classList.toggle('dark_theme');
+        document.body.classList.toggle('light_theme');
 
-          <!-- level -->
-          <label for="txtLevel">Level</label>
-          <input type="text" name="level" id="txtLevel">
+        const theme = document.body.classList[0];
+        const music = theme === 'light_theme' ? 'normal-world.mpeg' : 'inverted-world.mpeg';
 
-          <!-- personagem -->
-          <label for="txtPersonagem">Personagem</label>
-          <textarea name="character" id="txtCharacter" cols="30" rows="10"></textarea>
-
-          <button type="button" id="btnSubscribe">Me inscrever</button>
-        </form>
-      </div>
-    </div>
-  </section>
-  </main>
-
-  <!-- rodapé do site -->
-  <footer>
-    <p>Projeto construído para fins didáticos com o objetivo de colocar em prática os conhecimentos de HTML, CSS e JavaScript aprendidos na DIO.</p>
-    <img src="assests/images/footer/logo.svg" alt="Logo DIO">
-  </footer>
-
-  <!-- código JS -->
-  <script>
-    window.addEventListener('click', function() {
-      const audio = document.getElementById('music');
-      audio.play();
-      audio.volume = 0.2;
-    })
-
-    function switchTheme() {
-      document.body.classList.toggle('dark_theme');
-      document.body.classList.toggle('light_theme');
-
-      const theme = document.body.classList[0];
-      const music = theme === 'light_theme' ? 'normal-world.mpeg' : 'inverted-world.mpeg'
-
-      const audio = document.getElementById('music');
-      audio.src = `assets/musics/${music}`;
-      audio.play();
-      audio.volume = 0.2;
-    }
-  </script>
-
-</body>
+        const audio = document.getElementById('music');
+        audio.src = `assets/musics/${music}`;
+        audio.play();
+        audio.volume = 0.2;
+      }
+    </script>
+    <script src="assests/js/main.js"></script>
+  </body>
 </html>
